@@ -1,67 +1,102 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0b1d3f"><meta name="description" content="Pattern Detective HQ: learn number patterns with matchstick figures. Grade 8 Mathematics.">
+<meta name="description" content="Pattern Detective HQ: learn number patterns with matchstick figures. Grade 8 Mathematics.">
 <title>Pattern Detective HQ</title>
+<meta name="theme-color" content="#0E2A3B"><meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--c:#FF8A1F;box-sizing:border-box}*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;min-height:100vh;min-height:100dvh;font:500 17px/1.5 ui-rounded,"SF Pro Rounded",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#18263a;-webkit-tap-highlight-color:transparent;touch-action:manipulation;background:radial-gradient(900px 520px at 85% -5%,#2f6bff66,transparent 60%),radial-gradient(700px 480px at -5% 30%,#7b5cff55,transparent 60%),linear-gradient(180deg,#0e2a5e,#091733) fixed}
-.tb{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) 10px calc(14px + env(safe-area-inset-left));background:#0b1d3fcc;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid #ffffff22}
-.tb b{flex:1;font-size:18px}.tb a{color:#fff;text-decoration:none;background:#ffffff26;border:1px solid #ffffff33;border-radius:99px;padding:6px 14px}
-.wrap{max-width:980px;margin:0 auto;padding:14px calc(14px + env(safe-area-inset-right)) calc(32px + env(safe-area-inset-bottom)) calc(14px + env(safe-area-inset-left))}
-.pt{color:#fff;font-size:clamp(26px,6vw,38px);line-height:1.15;margin:16px 0 4px}.sub{color:#c9dcff;margin:0 0 14px}
-.hero{position:relative;overflow:hidden;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:calc(24px + env(safe-area-inset-top)) 20px calc(24px + env(safe-area-inset-bottom))}
-.hero h1{font-size:clamp(40px,11vw,76px);line-height:1;margin:4px 0 8px;font-weight:900;letter-spacing:-1px;text-shadow:0 4px 0 #0b1d3f,0 14px 34px #0009}
-.hero h1 span{display:block;background:linear-gradient(#fff0a6,#ffb11f);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 4px 0 #8a4b00)}
-.hero p{color:#c9dcff;margin:0 0 24px;font-size:18px}.tag{display:inline-block;background:#ffffff1f;border:1px solid #ffffff40;border-radius:99px;padding:4px 16px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#ffe27a;margin-bottom:6px}
-.fl{position:absolute;display:grid;place-items:center;width:54px;height:54px;border-radius:16px;font:800 30px system-ui;color:#fff;box-shadow:inset 0 -5px 0 #0003,0 12px 24px #0006;animation:fl 6s ease-in-out infinite;transform:rotate(-6deg)}
-@keyframes fl{50%{transform:translateY(-14px) rotate(7deg)}}.mas{animation:bob 3.2s ease-in-out infinite;filter:drop-shadow(0 14px 18px #0008)}@keyframes bob{50%{transform:translateY(-8px)}}
-.feat{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px;max-width:620px}.feat span{background:#ffffff1a;border:1px solid #ffffff33;border-radius:14px;padding:8px 13px;font-size:15px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
-.btn{display:inline-block;border:0;border-radius:16px;padding:13px 28px;font:800 18px ui-rounded,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#fff;text-decoration:none;cursor:pointer;background:linear-gradient(#5be892,#1fb866);box-shadow:0 5px 0 #138a4a,0 12px 22px #0006;text-shadow:0 1px 0 #0003;transition:transform .12s,box-shadow .12s}
-.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #138a4a}.btn.big{padding:16px 46px;font-size:22px}
-.btn.g{background:linear-gradient(#6aaaff,#2f6bff);box-shadow:0 5px 0 #1c45b3,0 12px 22px #0006}.btn.g:active{box-shadow:0 1px 0 #1c45b3}.btn.s{padding:9px 18px;font-size:16px;border-radius:14px}
-.grid{display:grid;gap:16px;grid-template-columns:1fr}@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}.tile.wide{grid-column:1/-1}}
-.tile{display:flex;gap:16px;align-items:center;text-decoration:none;color:#fff;border-radius:22px;padding:18px;min-height:112px;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 8px 0 var(--c3),0 18px 30px #0006;transition:transform .15s}
-.tile:active{transform:translateY(4px);box-shadow:0 4px 0 var(--c3)}.tile i{font-style:normal;font-size:38px;display:grid;place-items:center;width:66px;height:66px;border-radius:18px;background:#ffffff33;flex:none}
-.tile b{font-size:20px;display:block;line-height:1.2;margin-bottom:2px}.tile span{font-size:15px}
-.card{background:#fff;border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 10px 28px #0005;border-top:6px solid var(--c,#FF8A1F)}
-h2{margin:0 0 8px;color:var(--c,#0b1d3f)}h3{margin:14px 0 6px;color:#0b1d3f}
-.chip{display:inline-block;background:#e8eef2;border-radius:99px;padding:3px 12px;margin:3px;font-size:15px}.bx{background:#FFF4D1;border-radius:12px;padding:10px 14px;margin:10px 0}
-table{border-collapse:collapse;width:100%;font-size:16px}td,th{border:2px solid #e3eaf0;padding:6px;text-align:center}th{background:var(--c,#0b1d3f);color:#fff}
-.bar{height:12px;background:#ffffff26;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#ffe27a,#ffb11f)}
-.path{position:relative;margin:18px 0 0 22px;padding-left:36px;border-left:4px dotted #ffffff55}.node{display:block;position:relative;color:inherit;text-decoration:none;margin-bottom:14px}
-.node::before{content:attr(data-l);position:absolute;left:-60px;top:14px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;background:var(--c);box-shadow:0 0 0 5px #0d2551,inset 0 -4px 0 #0003}.node.dn::before{content:"★";background:#FFC83D;color:#5a3a00}
-.cols{display:grid}@media(min-width:860px){.cols{grid-template-columns:1.05fr .95fr;gap:0 16px;align-items:start}}
-.dots{color:var(--c);letter-spacing:3px}.q{font-size:20px;font-weight:700;line-height:2.1}
-input.ai{width:70px;padding:6px;border:3px solid var(--c);border-radius:12px;font:700 19px ui-rounded,system-ui,sans-serif;text-align:center;background:#fff;color:#18263a;-webkit-appearance:none}
-.fb{margin-top:12px;padding:10px 14px;border-radius:14px;background:#eef3f6;display:none}.fb.ok{display:block;background:#d9f2e3}.fb.no{display:block;background:#fbe1df}.fb.h{display:block}
-.tabs button{border:2px solid var(--c);background:#fff;color:var(--c);border-radius:99px;padding:7px 16px;font:700 16px ui-rounded,system-ui,sans-serif;margin:3px}.tabs button.on{background:var(--c);color:#fff}
-.cnt{display:inline-block;background:var(--c);color:#fff;border-radius:99px;padding:4px 16px;font-weight:700;margin:4px}svg line.sl{cursor:pointer}
-.mc{display:block;width:100%;text-align:left;margin:6px 0;border:2px solid var(--c);background:#fff;border-radius:14px;padding:11px;font:600 17px ui-rounded,system-ui,sans-serif;color:#18263a}.mc.on{background:var(--c);color:#fff}
-.cf{position:fixed;top:-16px;width:9px;height:13px;z-index:50;pointer-events:none;animation:cf 2.4s ease-in forwards}@keyframes cf{to{transform:translateY(110vh) rotate(540deg)}}
-@media(max-width:600px){.fl{width:42px;height:42px;font-size:22px;border-radius:13px}.fl:nth-of-type(n+3){display:none}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+:root{--ink:#14222D;--navy:#0E2A3B;--navy2:#16405A;--paper:#FBF6E9;--paper2:#F1E8CF;--line:#E4DAC0;--amber:#E0A24A;--flame:#E8651A;--head:#C0392B;--ok:#2E9E5B;--no:#D9534F;--hd:"Bricolage Grotesque","Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;background:var(--navy)}
+body{margin:0;min-height:100vh;min-height:100dvh;font:600 17px/1.55 "Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--navy) linear-gradient(#ffffff0a 1px,transparent 1px) 0 0/34px 34px,linear-gradient(90deg,#ffffff0a 1px,transparent 1px) 0 0/34px 34px}
+h1,h2,h3{font-family:var(--hd);margin:0}
+h2{font-size:21px;line-height:1.2;font-weight:800;letter-spacing:-.01em;margin-bottom:6px}
+h3{margin:16px 0 6px;font-size:13px;letter-spacing:.09em;text-transform:uppercase;color:#6a604a}
+:focus-visible{outline:3px solid var(--flame);outline-offset:2px}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:calc(10px + env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) 10px max(14px,env(safe-area-inset-left));background:#0A2130f5;border-bottom:1px solid #ffffff1c;color:#fff}
+.top b{flex:1;min-width:0;font:700 18px var(--hd);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top a{flex:none;display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:99px;background:#ffffff1a;color:#fff;text-decoration:none;font-weight:800;font-size:15px}
+.top a:hover{background:#ffffff30}
+.wrap{max-width:980px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-right)) calc(44px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+.wrap>h2{color:#fff;font-size:30px;margin:8px 0 6px}
+.hero{position:relative;overflow:hidden;min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:calc(34px + env(safe-area-inset-top)) 22px calc(34px + env(safe-area-inset-bottom))}
+.hin{position:relative;z-index:1;display:grid;gap:34px;align-items:center;justify-items:center;text-align:center;max-width:1040px;width:100%}
+.hero h1{font-size:clamp(42px,11vw,72px);line-height:.98;font-weight:800;letter-spacing:-.03em;color:#fff;margin:0 0 16px}
+.hero h1 span{color:var(--amber)}
+.hero p{margin:0 0 28px;color:#b7cad8;font-size:18px}
+.ev{position:relative;background:var(--paper);border-radius:16px;padding:22px 22px 16px;box-shadow:0 6px 0 #05131c;transform:rotate(-1.8deg);color:var(--ink)}
+.ev::before,.card::before{content:"";position:absolute;left:18px;top:-9px;width:58px;height:9px;background:var(--c,var(--amber));border-radius:7px 7px 0 0}
+.evh{font:800 12px/1 "Nunito",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8d7d52;margin-bottom:8px}
+.hero .ev p{margin:10px 0 0;color:var(--ink);font-size:18px;font-weight:700}.ev svg{width:230px!important;max-width:100%}
+.ms{position:absolute;width:9px;height:150px;border-radius:5px;background:var(--amber);opacity:.26}
+.ms::before{content:"";position:absolute;top:-6px;left:-3px;width:15px;height:15px;border-radius:50%;background:var(--head)}
+.m1{left:5%;top:6%;transform:rotate(28deg)}.m2{right:7%;bottom:8%;height:200px;transform:rotate(-24deg)}.m3{left:15%;bottom:5%;height:110px;transform:rotate(62deg)}
+@media(min-width:820px){.hin{grid-template-columns:1.2fr .8fr;text-align:left;justify-items:start}.ev{justify-self:center}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 28px;margin:4px 8px 4px 0;border:0;border-radius:14px;background:var(--flame);color:#fff;font:800 18px var(--hd);text-decoration:none;cursor:pointer;box-shadow:0 5px 0 #A33F08;touch-action:manipulation;transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #A33F08}
+.btn.g{background:var(--paper2);color:var(--ink);box-shadow:0 5px 0 #C8BC97}.btn.g:active{box-shadow:0 1px 0 #C8BC97}
+.btn.s{min-height:44px;padding:0 18px;font-size:16px;border-radius:12px;box-shadow:0 4px 0 #A33F08}.btn.s.g{box-shadow:0 4px 0 #C8BC97}
+.card{position:relative;background:var(--paper);border-radius:16px;padding:22px 20px 18px;margin:22px 0 14px;box-shadow:0 5px 0 #05131c}
+a.card{display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none;transition:transform .15s}
+a.card:hover{transform:translateY(-3px)}a.card:active{transform:translateY(2px)}
+a.card h2{margin:0 0 2px}
+.grid{display:grid;gap:0 20px}@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.mn{grid-template-columns:repeat(3,1fr)}.mn .feat{grid-column:1/-1;order:-1;padding:26px 26px 22px}.mn .feat h2{font-size:26px}.mn .card:not(.feat){flex-direction:column;align-items:flex-start;gap:12px;padding-bottom:22px}.mn .card:not(.feat) .go{display:none}body{font-size:18px}.wrap{max-width:1040px}.st>.card:first-child svg{zoom:1.25}}
+.ic{flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:var(--c);color:#fff}
+.ic svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mt{flex:1;min-width:0}.go{flex:none;font:800 24px var(--hd);color:var(--c)}
+.feat{background:#D95A12;color:#fff}.feat h2{color:#fff}.feat .ic{background:#fff;color:#D95A12}.feat .go{color:#fff}.feat::before{background:var(--amber)}
+.stl{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:12px;background:var(--c);color:#fff;font:800 30px var(--hd)}
+.stb{flex:none;max-width:42%;text-align:center;padding:5px 12px;border-radius:99px;background:var(--ink);color:#fff;font-size:14px;font-weight:800;line-height:1.25}.stb.d{background:var(--ok)}
+.stx small{display:block;color:#6a604a;font-weight:700}
+ol,ul{padding-left:22px;margin:6px 0}li{margin:7px 0}li::marker{color:var(--c);font-weight:800}
+.chip{display:inline-block;background:#fff;border:2px solid var(--line);border-radius:99px;padding:2px 13px;margin:3px 5px 3px 0;font-size:15px;font-weight:800}
+.bx{background:#FFF3C9;border:2px dashed #D9C27A;border-radius:12px;padding:12px 14px;margin:12px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:16px;overflow:hidden;border-radius:12px;border:2px solid var(--line);background:#fff}
+th,td{padding:8px 6px;text-align:center;border-bottom:1px solid var(--line)}th{background:var(--c,var(--navy));color:#fff;font-weight:800}tr:last-child td{border-bottom:0}
+.st{display:grid;gap:0 20px;align-items:start}@media(min-width:900px){.st{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
+.pr{display:flex;gap:6px;margin-bottom:14px}.pr i{flex:1;max-width:46px;height:8px;border-radius:99px;background:#DCD2B6}.pr i.d{background:var(--ok)}.pr i.c{background:var(--c)}
+.q{font-size:20px;font-weight:700;line-height:2.25;margin:0 0 10px}
+input.ai{width:78px;height:52px;margin:0 3px;border:2.5px solid var(--ink);border-radius:12px;background:#fff;color:var(--ink);font:800 22px "Nunito",sans-serif;text-align:center;box-shadow:inset 0 -3px 0 #0000000f}
+input.ai:focus{outline:0;border-color:var(--c);box-shadow:0 0 0 4px #0000001f}
+.mc{display:block;width:100%;min-height:56px;text-align:left;margin:8px 0;padding:12px 14px;border:2.5px solid var(--ink);border-radius:12px;background:#fff;color:var(--ink);font:700 17px "Nunito",sans-serif;box-shadow:0 3px 0 #C8BC97;touch-action:manipulation}
+.mc.on{background:var(--c);border-color:var(--c);color:#fff}
+.tabs button{min-height:44px;padding:0 16px;margin:0 6px 8px 0;border:2.5px solid var(--ink);border-radius:12px;background:#fff;color:var(--ink);font:800 16px var(--hd);touch-action:manipulation}
+.tabs button.on{background:var(--c);border-color:var(--c);color:#fff}
+.cnt{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;margin:4px 8px 4px 0;border-radius:12px;background:var(--c);color:#fff;font-weight:800}
+svg line.sl{cursor:pointer}svg line[stroke="#c5d0d8"]{stroke:#9DB0BD}
+.fb{display:none;position:relative;margin-top:14px;padding:12px 14px 12px 52px;border-radius:12px;background:#EDE6D0;font-weight:700;animation:pop .22s ease-out}
+.fb::before{position:absolute;left:13px;top:12px;width:27px;height:27px;border-radius:50%;color:#fff;font:800 16px/27px var(--hd);text-align:center}
+.fb.ok{display:block;background:#DDF1E4;color:#14502F}.fb.ok::before{content:"\2713";background:var(--ok)}
+.fb.no{display:block;background:#FADFDC;color:#7A231F}.fb.no::before{content:"!";background:var(--no)}
+.fb.h{display:block;background:#FFF0C2;color:#6B4B00}.fb.h::before{content:"?";background:#C99312}
+@keyframes pop{from{opacity:0;transform:scale(.97)}}@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.hin,.grid>.card{animation:rise .4s ease-out both}.grid>.card:nth-child(2){animation-delay:.05s}.grid>.card:nth-child(3){animation-delay:.1s}.grid>.card:nth-child(4){animation-delay:.15s}
+@media(max-width:480px){.card{padding:20px 16px 16px}th,td{padding:7px 2px;font-size:14px}.card i[style*="2A8C8C"]{width:12px!important;height:12px!important}.stb{max-width:36%}.q{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body><div id="app"></div>
 <script>
 const $=s=>document.querySelector(s),H=.866,app=$("#app");
-const COL=["#E8751A","#2A9D8F","#6C4FA3","#E5634D","#2F7BE5"];
+const COL=["#D9650F","#1F8A7D","#6C4FA3","#D4503A","#2F6FD6"];
 function sg(k,n){const s=new Set,ad=(a,b)=>{if(a[0]>b[0]||(a[0]==b[0]&&a[1]>b[1]))[a,b]=[b,a];s.add([a,b].map(p=>p.map(v=>+v.toFixed(3))).join("|"))};
 for(let i=0;i<n;i++){if(k=="t"){const x=i/2,u=i%2==0,A=[x,u?0:H],B=[x+1,u?0:H],C=[x+.5,u?H:0];ad(A,B);ad(A,C);ad(B,C)}else{ad([i,0],[i+1,0]);ad([i,1],[i+1,1]);ad([i,0],[i,1]);ad([i+1,0],[i+1,1])}}return[...s]}
 /* o.nw: highlight new sticks; o.pl: place mode (Set of placed keys) */
-function fig(k,n,o={}){const u=o.pl?64:40,cur=sg(k,n),pv=o.nw&&n>1?sg(k,n-1):[],w=(k=="t"?n/2+.5:n)*u+16,h=(k=="t"?H:1)*u+16;let s="";
+function fig(k,n,o={}){const u=40,cur=sg(k,n),pv=o.nw&&n>1?sg(k,n-1):[],w=(k=="t"?n/2+.5:n)*u+16,h=(k=="t"?H:1)*u+16;let s="";
 cur.forEach(e=>{const[a,b]=e.split("|").map(p=>p.split(",").map(Number)),X=p=>p[0]*u+8,Y=p=>h-8-p[1]*u,L=`x1="${X(a)}" y1="${Y(a)}" x2="${X(b)}" y2="${Y(b)}"`;
 if(o.pl){const on=o.pl.has(e);s+=`<line ${L} stroke="${on?"#D9A55B":"#c5d0d8"}" stroke-width="${on?7:5}" stroke-linecap="round" ${on?"":'stroke-dasharray="3 9"'}/>${on?`<circle cx="${X(a)}" cy="${Y(a)}" r="4.5" fill="#C0392B"/>`:""}<line class="sl" data-k="${e}" ${L} stroke="transparent" stroke-width="22"/>`}
 else{const nu=o.nw&&!pv.includes(e);s+=`<line ${L} stroke="${nu?"#E8751A":"#D9A55B"}" stroke-width="7" stroke-linecap="round"/><circle cx="${X(a)}" cy="${Y(a)}" r="4.5" fill="#C0392B"/>`}});
-return`<div style="display:inline-block;text-align:center;margin:4px 8px"><svg width="${w}" height="${h}">${s}</svg><div><b>${o.lab||"Figure "+n}</b>${o.c!=null?" = <b style='color:#E8751A'>"+o.c+"</b>":""}</div></div>`}
+return`<div style="display:inline-block;text-align:center;margin:4px 8px"><svg viewBox="0 0 ${w} ${h}" style="width:${Math.round(w*(o.pl?2.5:1.3))}px;max-width:100%;height:auto">${s}</svg><div><b>${o.lab||"Figure "+n}</b>${o.c!=null?" = <b style='color:#E8751A'>"+o.c+"</b>":""}</div></div>`}
 const chairs=r=>Array.from({length:r},(_,i)=>{const c=2*i+5;return`<div style="margin:3px 0"><b style="display:inline-block;width:62px">Row ${i+1}</b>${'<i style="display:inline-block;width:16px;height:15px;border-radius:4px;background:#2A8C8C;margin:1px"></i>'.repeat(c)} <b>${c}</b></div>`}).join("");
 /* ---------- pages ---------- */
 const OBJ=["identify the regularity (the rule of change) in a pattern of arranged objects;","determine the number of objects in the next figures by continuing the pattern;","generalize the pattern into a formula for the n-th figure (Uₙ) and use it to find any figure, such as the 10th or the 100th."];
 const KW=[["pattern","a group of objects or numbers that follows a rule"],["figure","one picture in the pattern"],["next","the one that comes after"],["add","to make more"],["difference","how much more we get each time"],["rule","what the pattern does each time"],["formula","a rule that uses n to find any figure"],["term","one number in a sequence"]];
-const MS=`<svg class="mas" width="150" height="205" viewBox="0 0 100 140"><ellipse cx="50" cy="134" rx="26" ry="5" fill="#0006"/><rect x="40" y="58" width="20" height="72" rx="10" fill="#E0AC5E"/><rect x="40" y="58" width="8" height="72" rx="4" fill="#F2C888"/><path d="M40 78L26 94" stroke="#E0AC5E" stroke-width="7" stroke-linecap="round"/><path d="M60 76L72 84" stroke="#E0AC5E" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="40" r="25" fill="#E0412F"/><circle cx="42" cy="30" r="7" fill="#fff" opacity=".3"/><ellipse cx="41" cy="42" rx="5.5" ry="6.5" fill="#fff"/><ellipse cx="59" cy="42" rx="5.5" ry="6.5" fill="#fff"/><circle cx="42.5" cy="43.5" r="3" fill="#12234a"/><circle cx="60.5" cy="43.5" r="3" fill="#12234a"/><path d="M41 54q9 8 18 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="20" y="21" width="60" height="8" rx="4" fill="#12234a"/><path d="M30 22q4-20 20-20t20 20z" fill="#1d3a7a"/><rect x="30" y="16" width="40" height="5" fill="#FFC83D"/><circle cx="80" cy="88" r="13" fill="#cfeaff" fill-opacity=".5" stroke="#FFC83D" stroke-width="5"/><path d="M71 98l-7 9" stroke="#FFC83D" stroke-width="6" stroke-linecap="round"/></svg>`;
-const tb=(t,back)=>`<div class="tb">${back?`<a href="#/${back}">← ${back=="menu"?"Menu":"Back"}</a>`:""}<b>${t}</b></div>`;
+const tb=(t,back)=>`<div class="top">${back?`<a href="#/${back}">← ${back=="menu"?"Menu":"Back"}</a>`:""}<b>${t}</b></div>`;
+const IC={objectives:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></svg>',materials:'<svg viewBox="0 0 24 24"><path d="M5 4.5h9.5A3.5 3.5 0 0 1 18 8v11.5H8.5A3.5 3.5 0 0 1 5 16z"/><path d="M5 16a3.5 3.5 0 0 1 3.5-3.5H18"/></svg>',worksheet:'<svg viewBox="0 0 24 24"><path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4M9.5 12h5M9.5 15.5h5"/></svg>',game:'<svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/></svg>'};
 const P={
-home:()=>`<div class="hero"><i class="fl" style="top:3%;left:5%;background:linear-gradient(#6aaaff,#2f6bff)">+</i><i class="fl" style="top:3%;right:5%;background:linear-gradient(#ffb04a,#ff7a1a);animation-delay:-2s">×</i><i class="fl" style="bottom:18%;left:6%;background:linear-gradient(#5be892,#1fb866);animation-delay:-4s">÷</i><i class="fl" style="bottom:12%;right:8%;background:linear-gradient(#a58bff,#6b4de0);animation-delay:-1s">−</i><span class="tag">Look • Count • Predict</span>${MS}<h1>Pattern<span>Detective HQ</span></h1><p>Number Patterns • Grade 8 Mathematics</p><a class="btn big" href="#/menu">Start ▶</a><div class="feat"><span>🔨 Build figures</span><span>🔎 Find the rule</span><span>✏️ Write the formula</span><span>🏅 Earn badges</span></div></div>`,
-menu:()=>tb("Pattern Detective HQ")+`<div class="wrap"><h1 class="pt">Choose your mission</h1><p class="sub">Pick a card to start.</p><div class="grid">${[["objectives","🎯","Learning Objectives","What you will learn today.","#FFA040,#FF7A1A,#B85A0A"],["materials","📘","Materials","Patterns, differences, and the formula Uₙ.","#35D6B8,#16A38C,#0E7566"],["worksheet","📝","Matchstick Pattern Worksheet","Download and print your worksheet.","#9D86FF,#6B4DE0,#4A33A8"],["game","🔎","Matchstick Pattern Detectives","The game that helps you complete the worksheet.","#FF8A78,#F0553F,#A83426"]].map((x,i)=>{const c=x[4].split(",");return`<a class="tile" style="--c1:${c[0]};--c2:${c[1]};--c3:${c[2]}" href="#/${x[0]}"><i>${x[1]}</i><div><b>${x[2]}</b><span>${x[3]}</span></div></a>`}).join("")}</div></div>`,
+home:()=>`<div class="hero"><i class="ms m1"></i><i class="ms m2"></i><i class="ms m3"></i><div class="hin"><div><h1>Pattern<br><span>Detective HQ</span></h1><p>Number Patterns • Grade 8 Mathematics</p><a class="btn" href="#/menu">Start the case</a></div><div class="ev"><div class="evh">Case file</div>${fig("t",3,{lab:"Figure 3"})}<p class="evq">How many matchsticks for <b>Figure 100</b>?</p></div></div></div>`,
+menu:()=>tb("Pattern Detective HQ")+`<div class="wrap"><h2>Menu</h2><div class="grid mn">${[["objectives","Learning Objectives","What you will learn today.",0],["materials","Materials","Patterns, differences, and the formula Uₙ.",1],["worksheet","Matchstick Pattern Worksheet","Download and print the LKPD.",2],["game","Matchstick Pattern Detectives","The game that helps you complete the worksheet.",3]].map(x=>`<a class="card${x[0]=="game"?" feat":""}" style="--c:${COL[x[3]]}" href="#/${x[0]}"><span class="ic">${IC[x[0]]}</span><span class="mt"><h2>${x[1]}</h2>${x[2]}</span><span class="go">→</span></a>`).join("")}</div></div>`,
 objectives:()=>tb("Learning Objectives","menu")+`<div class="wrap"><div class="card" style="--c:${COL[0]}"><h2>By the end of the lesson, I can …</h2><ol>${OBJ.map(o=>`<li>${o}</li>`).join("")}</ol></div><div class="card" style="--c:${COL[1]}"><h2>How I know I can do it</h2><ul><li>I can say how many objects are added from one figure to the next.</li><li>I can complete a table for the first five figures and explain the next ones.</li><li>I can write Uₙ and check it by putting in n.</li><li>I can use Uₙ to answer a real-life question and explain my answer in English.</li></ul></div></div>`,
 materials:()=>tb("Materials","menu")+`<div class="wrap"><div class="card" style="--c:${COL[0]}"><h2>What is a pattern?</h2>A <b>pattern</b> is a regular arrangement of objects or numbers that follows a rule. In a pattern of objects, each picture is a <b>figure</b>: Figure 1, Figure 2, Figure 3, …</div>
 <div class="card" style="--c:${COL[1]}"><h2>Example 1: triangles</h2>${[1,2,3].map(n=>fig("t",n,{nw:1})).join("")}<p>Matchsticks: <b>3, 5, 7, …</b> The orange sticks are new. The <b>difference</b> is 2.</p></div>
@@ -70,8 +105,8 @@ materials:()=>tb("Materials","menu")+`<div class="wrap"><div class="card" style=
 <table style="--c:${COL[2]}"><tr><th>Figure (n)</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>10</th><th>100</th></tr><tr><td>2n + 1</td><td>3</td><td>5</td><td>7</td><td>9</td><td>11</td><td>21</td><td>201</td></tr><tr><td>3n + 1</td><td>4</td><td>7</td><td>10</td><td>13</td><td>16</td><td>31</td><td>301</td></tr></table></div>
 <div class="card" style="--c:${COL[4]}"><h2>Detective steps</h2><span class="chip">1 Look</span><span class="chip">2 Count</span><span class="chip">3 Compare</span><span class="chip">4 Predict</span><span class="chip">5 Generalize</span></div>
 <div class="card" style="--c:${COL[1]}"><h2>Key Words</h2>${KW.map(k=>`<div><b>${k[0]}</b>: ${k[1]}</div>`).join("")}<h3>Sentence frames</h3><div class="bx">I know that … / I need to find …<br>Each time we add … matchsticks, so Figure … has …<br>The rule is … / The formula is Uₙ = …<br>We checked with n = …, and it works.<br>So, the answer is …</div></div></div>`,
-worksheet:()=>tb("Matchstick Pattern Worksheet","menu")+`<div class="wrap"><div class="card" style="--c:${COL[2]}"><h2>📝 Matchstick Pattern Worksheet (LKPD)</h2><p>Your teacher prints this worksheet for each group. You can also download it here. Write your final answers on the worksheet.</p><p><a class="btn" href="Matchstick_Pattern_Worksheet.pdf" download>⬇ Download PDF</a> &nbsp; <a class="btn g s" href="Matchstick_Pattern_Worksheet.pdf" target="_blank" rel="noopener">Open and print</a></p></div>
-<div class="card" style="--c:${COL[0]}"><h2>What is inside</h2><div><span class="chip" style="background:#FDEBD6">A Look and Count</span><span class="chip" style="background:#DDF2EF">B Compare and Predict</span><span class="chip" style="background:#ECE6F6">C Generalize</span><span class="chip" style="background:#FCE3DE">D A New Pattern</span><span class="chip" style="background:#DFEBFC">E The Hall</span></div><p>Each part matches a station in the game.</p><a class="btn s" href="#/game">Open the game 🔎</a></div></div>`};
+worksheet:()=>tb("Matchstick Pattern Worksheet","menu")+`<div class="wrap"><div class="card" style="--c:${COL[2]}"><h2>Matchstick Pattern Worksheet (LKPD)</h2><p>Your teacher prints this worksheet for each group. You can also download it here. Write your final answers on the worksheet.</p><p><a class="btn" href="Matchstick_Pattern_Worksheet.pdf" download>Download PDF</a> &nbsp; <a class="btn g s" href="Matchstick_Pattern_Worksheet.pdf" target="_blank" rel="noopener">Open and print</a></p></div>
+<div class="card" style="--c:${COL[0]}"><h2>What is inside</h2><div><span class="chip" style="background:#FDEBD6">A Look and Count</span><span class="chip" style="background:#DDF2EF">B Compare and Predict</span><span class="chip" style="background:#ECE6F6">C Generalize</span><span class="chip" style="background:#FCE3DE">D A New Pattern</span><span class="chip" style="background:#DFEBFC">E The Hall</span></div><p>Each part matches a station in the game.</p><a class="btn s" href="#/game">Open the game</a></div></div>`};
 /* ---------- game ---------- */
 const ST=[["Look and Count","Sharp Eyes","t"],["Compare and Predict","Prediction Pro","t"],["Generalize","Formula Finder","t"],["A New Pattern: Squares","Pattern Master","s"],["Real-Life Problem: The Hall","Hall Hero","t"]];
 const Q=[
@@ -88,25 +123,24 @@ if(s==2){const ok=(G.ok[2]||0)>0,r=n=>ok||n<3?[n,2*n,2*n+1,1]:[n,"?","?","?"];re
 if(s==4)return chairs(G.r)+`<p><button class="btn s" data-a="ar">+ Add Row</button> <button class="btn g s" data-a="rr">− Remove Row</button></p>`;
 return""}
 function station(){const s=G.st,q=Q[s][G.qi],c=COL[s];let n=0;const t=q[0].replace(/__/g,()=>q[5]?"":`<input class="ai" inputmode="numeric" data-n="${n++}">`);
-return tb("Station "+"ABCDE"[s]+": "+ST[s][0],"game")+`<div class="wrap" style="--c:${c}"><div class="cols"><div class="card" style="--c:${c}">${board()}</div><div class="card" style="--c:${c}"><div class="dots">${Q[s].map((_,i)=>i<G.qi?"●":i==G.qi?"◉":"○").join(" ")}</div><p class="q">${t}</p>${q[5]?q[5].map((o,i)=>`<button class="mc ${G.pk==i?"on":""}" data-a="pk" data-i="${i}">${o}</button>`).join(""):""}<button class="btn" data-a="ck">Check ✓</button> <button class="btn g s" data-a="hn">💡 Hint</button><div class="fb" id="fb"></div></div></div></div>`}
-function gamePage(){const n=G.done.length;return tb("Matchstick Pattern Detectives","menu")+`<div class="wrap"><h1 class="pt">🔎 Matchstick Pattern Detectives</h1><p class="sub">Choose a station. Each station matches a part of your worksheet. Work as a group on one smartphone and write your final answers on the worksheet.</p><div class="card" style="--c:#FFC83D"><b>Detective steps:</b> Look → Count → Compare → Predict → Generalize.<br><b>Roles:</b> Builder builds, Recorder writes, Checker checks the numbers, Speaker explains. Swap roles in Part B and D!</div><p style="color:#fff;margin:16px 0 6px"><b>${n} of 5 stations cleared</b></p><div class="bar"><i style="width:${n*20}%"></i></div><div class="path">${ST.map((x,i)=>`<a class="node${G.done.includes(i)?" dn":""}" data-l="${"ABCDE"[i]}" href="#/game/${"ABCDE"[i]}" style="--c:${COL[i]}"><div class="card" style="--c:${COL[i]};margin:0"><h2>Station ${"ABCDE"[i]}: ${x[0]}</h2>Worksheet Part ${"ABCDE"[i]}${G.done.includes(i)?" • 🏅 "+x[1]:""}</div></a>`).join("")}</div>${n==5?`<div class="card" style="--c:#FFC83D"><h2>🎉 Mission Complete!</h2>Big ideas: 1) Find what is added each time. 2) Use it to predict the next figures. 3) Write the formula Uₙ to find any figure.<br><b>Next: our Kahoot quiz!</b> Your teacher will show the code.</div>`:""}</div>`}
-function boom(){for(let i=0;i<36;i++){const d=document.createElement("i");d.className="cf";d.style.cssText=`left:${Math.random()*100}vw;background:hsl(${Math.random()*360},85%,60%);animation-delay:${Math.random()*.5}s`;document.body.appendChild(d);setTimeout(()=>d.remove(),3000)}}
+return tb("Station "+"ABCDE"[s]+": "+ST[s][0],"game")+`<div class="wrap st" style="--c:${c}"><div class="card" style="--c:${c}">${board()}</div><div class="card" style="--c:${c}"><div class="pr">${Q[s].map((_,i)=>`<i class="${i<G.qi?"d":i==G.qi?"c":""}"></i>`).join("")}</div><p class="q">${t}</p>${q[5]?q[5].map((o,i)=>`<button class="mc ${G.pk==i?"on":""}" data-a="pk" data-i="${i}">${o}</button>`).join(""):""}<button class="btn" data-a="ck">Check</button><button class="btn g s" data-a="hn">Hint</button><div class="fb" id="fb"></div></div></div>`}
+function gamePage(){return tb("Matchstick Pattern Detectives","menu")+`<div class="wrap"><div class="card" style="--c:${COL[0]}"><h2>Matchstick Pattern Detectives</h2>Choose a station. Each station matches a part of your worksheet. Work as a group on one smartphone, and write your final answers on the worksheet.<div class="bx">Detective steps: Look → Count → Compare → Predict → Generalize.<br>Roles: Builder builds, Recorder writes, Checker checks the numbers, Speaker explains. Swap roles in Part B and D!</div></div><div class="grid">${ST.map((x,i)=>`<a class="card" style="--c:${COL[i]}" href="#/game/${"ABCDE"[i]}"><span class="stl">${"ABCDE"[i]}</span><span class="mt stx"><h2>${x[0]}</h2><small>Worksheet Part ${"ABCDE"[i]}</small></span><span class="stb${G.done.includes(i)?" d":""}">${G.done.includes(i)?"Done · "+x[1]:"Play"}</span></a>`).join("")}</div>${G.done.length==5?`<div class="card" style="--c:${COL[1]}"><h2>Mission complete!</h2>Big ideas: 1) Find what is added each time. 2) Use it to predict the next figures. 3) Write the formula Uₙ to find any figure.<br><b>Next: our Kahoot quiz!</b> Your teacher will show the code.</div>`:""}</div>`}
 /* ---------- router ---------- */
 function route(){let h=location.hash.replace(/^#\/?/,"")||"home";const[a,b]=h.split("/");
 if(a=="game"&&b){const i="ABCDE".indexOf(b.toUpperCase());if(i<0){location.hash="#/game";return}if(G.st!=i||!G.started){Object.assign(G,{st:i,qi:0,tr:0,fn:1,pl:new Set,nw:0,r:3,pk:-1,started:1})}G.cur=i;app.innerHTML=station();scrollTo(0,0);return}
 G.started=0;app.innerHTML=a=="game"?gamePage():(P[a]||P.home)();scrollTo(0,0)}
 function fb(c,m,x){const e=$("#fb");e.className="fb "+c;e.innerHTML=m+(x||"")}
 function redraw(){$(".card").innerHTML=board()}
-function pass(w){G.ok[G.st]=(G.ok[G.st]||0)+1;G.tr=0;const last=G.qi==Q[G.st].length-1;if(last&&!G.done.includes(G.st)){G.done.push(G.st);boom()}redraw();
-fb("ok",(w?"💡 "+w:"✅ Great detective work!")+(last?" 🏅 "+ST[G.st][1]:""),`<br><button class="btn s" style="margin-top:8px" data-a="${last?"back":"nx"}">${last?(G.st<4?"Back to stations":"Finish"):"Next ▶"}</button>`)}
+function pass(w){G.ok[G.st]=(G.ok[G.st]||0)+1;G.tr=0;const last=G.qi==Q[G.st].length-1;if(last&&!G.done.includes(G.st))G.done.push(G.st);redraw();
+fb("ok",(w?w:"Great detective work!")+(last?" Badge earned: "+ST[G.st][1]:""),`<br><button class="btn s" style="margin-top:8px" data-a="${last?"back":"nx"}">${last?(G.st<4?"Back to stations":"Finish"):"Next →"}</button>`)}
 const act={
 fn(e){G.fn=+e.dataset.i;G.pl=new Set;app.innerHTML=station()},clr(){G.pl=new Set;redraw()},
 nw(){G.nw=!G.nw;redraw()},ar(){G.r=Math.min(5,G.r+1);redraw()},rr(){G.r=Math.max(2,G.r-1);redraw()},
 pk(e){G.pk=+e.dataset.i;document.querySelectorAll(".mc").forEach((b,i)=>b.classList.toggle("on",i==G.pk))},
 nx(){G.qi++;G.tr=0;G.pk=-1;app.innerHTML=station()},back(){location.hash="#/game"},
-hn(){const q=Q[G.st][G.qi];fb("h","💡 "+q[2+Math.min(G.tr,1)])},
+hn(){const q=Q[G.st][G.qi];fb("h",q[2+Math.min(G.tr,1)])},
 ck(){const q=Q[G.st][G.qi];let ok;if(q[5])ok=G.pk==q[1][0];else{const v=[...document.querySelectorAll(".ai")].map(i=>i.value.trim());ok=v.length==q[1].length&&v.every((x,i)=>x!==""&&Number(x)==q[1][i])}
-if(ok)return pass();G.tr++;if(G.tr<3)return fb("no","❌ Not yet. Try again! "+q[2+G.tr-1]);fb("no","❌ Not yet. Try again!",'<br><button class="btn g s" style="margin-top:8px" data-a="sh">Show me how</button>')},
+if(ok)return pass();G.tr++;if(G.tr<3)return fb("no","Not yet. Try again! "+q[2+G.tr-1]);fb("no","Not yet. Try again!",'<br><button class="btn g s" style="margin-top:8px" data-a="sh">Show me how</button>')},
 sh(){pass(Q[G.st][G.qi][4])}};
 document.addEventListener("click",e=>{const l=e.target.closest("line.sl");if(l){const k=l.dataset.k;G.pl.has(k)?G.pl.delete(k):G.pl.add(k);redraw();return}
 const b=e.target.closest("[data-a]");if(b&&act[b.dataset.a])act[b.dataset.a](b)});
